@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>draw on canvas</title>
+		<script>
+			function sample(){
+				var canvas = document.getElementById('sample');
+				if(canvas.getContext){
+					var context = canvas.getContext('2d');
+					context.fillRect(20, 40, 50, 100);
+					context.strokeStyle = 'rgb(00,00,255)';
+					context.fillStyle = 'rgb(255,00,00)';
+
+					context.strokeRect(200,80,100,50);
+
+					context.arc(150,75,60, Math.PI*1, true);
+					context.fill();
+				}
+			}
+		</script>
+	</head>
+	<body onload="sample()">
+		<h2>Canvas Test</h2>
+		<canvas id='sample'></canvas>
+	</body>
+</html>
+
+

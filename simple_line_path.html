@@ -1,0 +1,46 @@
+<!DOCTYPE HTML> 
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!--
+    <meta name="viewport" context="width=device-width,initial-scale=1">
+    -->
+    <title>A Simple Canvas Square</title> 
+    <style type="text/css" media="screen">
+      #canvas {border: 1px solid #c0c0c0;} 
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" width="270" height="270"></canvas>
+    <script type="text/javascript" charset="utf-8"> 
+
+      var canvas = document.getElementById("canvas");
+      var context = canvas.getContext("2d");
+
+      context.strokeStyle = "black";
+      context.lineWidth = 10;
+      context.lineCap = 'butt';
+
+      // パスの初期化
+      context.beginPath();
+
+      // 一つ目のサブパス
+      context.moveTo(50, 10);
+      context.lineTo(70, 90);
+      context.lineTo(30, 90);
+      context.closePath();
+
+      //  二つ目のサブパス
+      context.beginPath();
+      context.moveTo(150, 10);
+      context.lineTo(170, 90);
+      context.lineTo(130, 90);
+      context.closePath();
+
+      // パスを描く
+      context.stroke();
+
+      </script>
+    </body>
+  </html>
+
